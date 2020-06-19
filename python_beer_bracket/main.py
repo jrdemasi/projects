@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import random 
+import random
 
 beers = {
     0: "Labatt Blue Light",
@@ -20,15 +20,19 @@ beers = {
 pairs = []
 seen = []
 
+
 def rand_int():
     return random.randint(0, 11)
+
 
 def print_beers():
     counter = 1
     for pair in pairs:
-        print("Matchup {0} is {1} and {2}".format(counter, beers[pair[0]], beers[pair[1]]))
+        print("Matchup {0} is {1} and {2}".format(
+            counter, beers[pair[0]], beers[pair[1]]))
         counter = counter + 1
     return
+
 
 def main():
     while len(pairs) < 6:
@@ -43,7 +47,8 @@ def main():
         pair = (int1, int2)
         pairs.append(pair)
     print_beers()
-    return 
+    return
 
-if __name__ == '__main__': 
+
+if __name__ == '__main__':
     main()
